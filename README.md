@@ -1,4 +1,4 @@
-# Vue Map Chart
+# Vue Chart Map
 
 A Vue JS Component for displaying dynamic data on a world map.
 
@@ -8,6 +8,7 @@ A Vue JS Component for displaying dynamic data on a world map.
 ## Credits
 
 - Most of this code is copied from [https://github.com/Ghrehh/vue-world-map](https://github.com/Ghrehh/vue-world-map)
+- Most of this code is also copied from [https://github.com/maguayo/vue-map-chart](https://github.com/maguayo/vue-map-chart)
 - Map SVG [amCharts](https://www.amcharts.com/svg-maps/?map=world)
 
 

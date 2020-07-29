@@ -34,7 +34,7 @@ export const getBaseCss = ({ defaultCountryFillColor, countryStrokeColor, legend
   .vue-map-legend-header span{
     color:${legendFontColorHeader}
   }
-.vue-map-legend{
+  .vue-map-legend{
     border-color: ${legendBorderColor}!important;
     border-radius:${legendBorderRadius}px;
     box-shadow: ${legendBoxShadow ? '3px 4px #00000017' : 'none'};
@@ -52,7 +52,7 @@ export const getDynamicMapCss = (countryData, chromaScale, highColor, chromaScal
     const value = countryData[key];
     const scaleValue = colorScaleUnit * (value - min);
     const hex = chromaScale(scaleValue).hex();
-    css.push(`.vue-world-map #${key} { fill: ${chromaScaleOn ? hex : highColor}; }`);
+    css.push(`.vue-world-map #${key} { fill: ${!chromaScaleOn ? hex : highColor}; }`);
   });
   return css;
 };

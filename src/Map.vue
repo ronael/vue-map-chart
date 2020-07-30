@@ -208,6 +208,11 @@ export default {
 	created () {
 		this.countries.registerLocale(require(`i18n-iso-countries/langs/${this.codeLang}.json`));
 	},
+	watch: {
+		codeLang (newVal, oldVal) {
+			this.countries.registerLocale(require(`i18n-iso-countries/langs/${newVal}.json`));
+		}
+	},
 	mounted() {
 		const paths = document.getElementsByClassName('land');
 		const _this = this;

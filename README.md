@@ -50,7 +50,7 @@ import MapChart from 'vue-map-chart'
   lowColor="#aaaaaa"
   countryStrokeColor="#909090"
   defaultCountryFillColor="#dadada"
-  lang="fr"
+  LangUser="fr"
   />
 ```
 
@@ -75,7 +75,7 @@ import MapChart from 'vue-map-chart'
 | legendBoxShadowCss |  Add CSS border property example: "1px solid #fff" | yes |String|
 | showLegend | (WIP) If true, when you select a country a legend will appear on the screen | WIP |Boolean|
 | showEmptyValue | If false, does not display the countries in hover, if no value is passed for this country in countryData | yes |Boolean|
-| lang | Change the language of the names of countries with an ISO code like "fr", default is "en" | yes |String|
+| LangUser | Change the language of the names of countries with an ISO code like "fr", default is "en" | yes |String|
 
 
 

@@ -1,7 +1,7 @@
 <template>
   <div class="vue-world-map">
     <Map
-      :codeLang="Lang"
+      :codeLang="LangUser"
       @hoverCountry="onHoverCountry"
       @hoverLeaveCountry="onHoverLeaveCountry"
     />
@@ -72,7 +72,7 @@ export default {
       type: String,
       default: '#fde2e2'
     },
-    Lang: {
+    LangUser: {
       type: String,
       default: 'en'
     },

@@ -206,7 +206,6 @@ export default {
 		}
 	},
 	created () {
-		this.countries.registerLocale(require(`i18n-iso-countries/langs/en.json`));
 		this.countries.registerLocale(require(`i18n-iso-countries/langs/${this.codeLang}.json`));
 	},
 	mounted() {

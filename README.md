@@ -71,8 +71,8 @@ import MapChart from 'vue-map-chart'
 | legendFontColorContent |  The font color of the legend's content | yes |String|
 | positionLeftTooltip |  Choose the left position of the tooltip in relation to the mouse, like 3 or -13 | yes |Number|
 | positionTopTooltip |  choose the Top position of the tooltip in relation to the mouse, like 3 or -13 | yes |Number|
-| legendBorderCss |  Add CSS box-shadow property example: "0px 0px 15px #fff" | yes |String|
-| legendBoxShadowCss |  Add CSS border property example: "1px solid #fff" | yes |String|
+| legendBorderCss |  Add CSS box-shadow property example: "1px solid #fff" | yes |String|
+| legendBoxShadowCss |  Add CSS border property example: "0px 0px 15px #fff" | yes |String|
 | showLegend | (WIP) If true, when you select a country a legend will appear on the screen | WIP |Boolean|
 | showEmptyValue | If false, does not display the countries in hover, if no value is passed for this country in countryData | yes |Boolean|
 | LangUser | Change the language of the names of countries with an ISO code like "fr", default is "en" | yes |String|

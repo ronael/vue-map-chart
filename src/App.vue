@@ -1,6 +1,7 @@
 <template>
   <div class="vue-world-map">
     <Map
+      :codeLang="Lang"
       @hoverCountry="onHoverCountry"
       @hoverLeaveCountry="onHoverLeaveCountry"
     />
@@ -19,13 +20,17 @@
       >
         <div
           class="vue-map-legend-header"
-          :style="`background: ${legendHeaderBackgroundColor}; color: ${legendFontColorHeader}`"
+          :style="
+            `background: ${legendHeaderBackgroundColor}; color: ${legendFontColorHeader}`
+          "
         >
           <span v-if="notShow">{{ legend.name }}</span>
         </div>
         <div
           class="vue-map-legend-content"
-          :style="`background: ${legendContentBackgroundColor}; color: ${legendFontColorContent}`"
+          :style="
+            `background: ${legendContentBackgroundColor}; color: ${legendFontColorContent}`
+          "
         >
           <span v-if="notShow">{{ countryData[legend.code] || 0 }}</span>
         </div>
@@ -67,6 +72,10 @@ export default {
       type: String,
       default: '#fde2e2'
     },
+    Lang: {
+      type: String,
+      default: 'en'
+    },
     highColor: {
       type: String,
       default: '#d83737'
@@ -103,19 +112,19 @@ export default {
       type: Number,
       default: 30
     },
+    positionTopTooltip: {
+      type: Number,
+      default: -20
+    },
     legendBoxShadowCss: {
       type: String,
       default: '0px 0px 15px rgba(182, 182, 182, 0.407)'
     },
-    positionTopTooltip: {
-      type: Number,
-      default: 0
-    },
-    legendFontColorHeader: {
+    legendFontColorHeader: {
       type: String,
       default: ''
     },
-    legendFontColorContent: {
+    legendFontColorContent: {
       type: String,
       default: ''
     }
@@ -187,7 +196,9 @@ export default {
 #map-svg {
   height: 100%;
 }
-
+.vue-world-map * {
+  transition: all 0.2s ease ;
+}
 .vue-world-map {
   position: relative;
 }

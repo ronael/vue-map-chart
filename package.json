@@ -3,6 +3,8 @@
   "bundleDependencies": false,
   "dependencies": {
     "chroma-js": "^1.3.5",
+    "sass-loader": "^9.0.2",
+    "i18n-iso-countries": "^6.0.0",
     "vue": "^2.5.2"
   },
   "deprecated": false,

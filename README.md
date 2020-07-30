@@ -2,7 +2,7 @@
 
 A Vue JS Component for displaying dynamic data on a world map.
 
-![preview](https://raw.githubusercontent.com/maguayo/vue-map-chart/master/preview/preview-world.png)
+![preview](https://raw.githubusercontent.com/ronael/vue-map-chart/master/preview/preview-world.png)
 
 
 ## Credits
@@ -10,13 +10,14 @@ A Vue JS Component for displaying dynamic data on a world map.
 - Most of this code is copied from [https://github.com/Ghrehh/vue-world-map](https://github.com/Ghrehh/vue-world-map)
 - Most of this code is also copied from [https://github.com/maguayo/vue-map-chart](https://github.com/maguayo/vue-map-chart)
 - Map SVG [amCharts](https://www.amcharts.com/svg-maps/?map=world)
+- Lang support [i18n-iso-countries](https://github.com/michaelwittig/node-i18n-iso-countries)
 
 
 ## Installation
 
-Install via npm using `npm install vue-map-chart`
+Install via npm using `npm install vue-chart-map`
 ``` javascript
-import MapChart from 'vue-map-chart'
+import MapChart from 'vue-chart-map'
 ```
 
 ## Usage
@@ -49,6 +50,7 @@ import MapChart from 'vue-map-chart'
   lowColor="#aaaaaa"
   countryStrokeColor="#909090"
   defaultCountryFillColor="#dadada"
+  lang="fr"
   />
 ```
 
@@ -59,7 +61,6 @@ import MapChart from 'vue-map-chart'
 | countryData | See Usage Section above for details  | no | Object |
 | lowColor | Countries with lower values will be colored more strongly with this color | yes | String|
 | highColor | Countries with higher values will be colored more strongly with this color | yes | String|
-| chromaScaleOn |If True chromaScale of color, if false countries with value will be filled of the hightColor. By default is True | yes | Boolean|
 | defaultCountryFillColor | Countries with no data will default to this color | yes |String |
 | countryStrokeColor | The color of the border around countries | yes | String|
 | legendBorderColor |  The color of the legend's border | yes | String|
@@ -68,8 +69,13 @@ import MapChart from 'vue-map-chart'
 | legendContentBackgroundColor |  The background color of the legend's content | yes |String|
 | legendFontColorHeader |  The font color of the legend's header | yes |String|
 | legendFontColorContent |  The font color of the legend's content | yes |String|
-| legendBoxShadow |  If true, a box shadow is display | yes |Boolean|
+| positionLeftTooltip |  Choose the left position of the tooltip in relation to the mouse, like 3 or -13 | yes |Number|
+| positionTopTooltip |  choose the Top position of the tooltip in relation to the mouse, like 3 or -13 | yes |Number|
+| legendBorderCss |  Add CSS box-shadow property example: "0px 0px 15px #fff" | yes |String|
+| legendBoxShadowCss |  Add CSS border property example: "1px solid #fff" | yes |String|
 | showLegend | (WIP) If true, when you select a country a legend will appear on the screen | WIP |Boolean|
+| showEmptyValue | If false, does not display the countries in hover, if no value is passed for this country in countryData | yes |Boolean|
+| lang | Change the language of the names of countries with an ISO code like "fr", default is "en" | yes |String|
 
 
 

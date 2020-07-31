@@ -228,9 +228,6 @@ export default {
   border-top: 0px solid #acacad;
 }
 
-.vue-world-map .land:hover {
-  fill: #f7d7d7 !important;
-}
 
 .fade-left-enter-active,
 .fade-left-leave-active {

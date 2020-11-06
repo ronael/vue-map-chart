@@ -32,7 +32,9 @@
             `background: ${legendContentBackgroundColor}; color: ${legendFontColorContent}`
           "
         >
-          <span v-if="notShow">{{ countryData[legend.code] || 0 }}</span>
+          <span v-if="notShow">{{
+            renderValue(countryData[legend.code]) || 0
+          }}</span>
         </div>
       </div>
     </transition>
@@ -40,6 +42,7 @@
 </template>
 
 <script>
+import { replace } from '@amcharts/amcharts4/.internal/core/utils/Array'
 import chroma from 'chroma-js'
 import Map from './Map'
 import {
@@ -127,6 +130,18 @@ export default {
     legendFontColorContent: {
       type: String,
       default: ''
+    },
+    currencyAdd: {
+      type: Boolean,
+      default: true
+    },
+    currencyOnlySign: {
+      type: Boolean,
+      default: true
+    },
+    currencyCurrent: {
+      type: String,
+      default: 'USD'
     }
   },
   data () {
@@ -178,6 +193,26 @@ export default {
         this.chromaScale
       )
       this.$data.node.innerHTML = getCombinedCssString(baseCss, dynamicMapCss)
+    },
+    currencyNumber (value, currency, lang) {
+      let formatter
+      formatter = new Intl.NumberFormat(lang, {
+        style: 'currency',
+        currency: currency
+      })
+      if (this.currencyOnlySign) {
+        return formatter
+          .format(value)
+          .replace('USD', '')
+          .replace('US', '')
+      }
+      return formatter.format(value)
+    },
+    renderValue (value) {
+      if (!this.currencyAdd) {
+        return value
+      }
+      return this.currencyNumber(value, this.currencyCurrent, this.LangUser)
     }
   },
   mounted () {
@@ -197,7 +232,7 @@ export default {
   height: 100%;
 }
 .vue-world-map * {
-  transition: all 0.2s ease ;
+  transition: all 0.2s ease;
 }
 .vue-world-map {
   position: relative;
@@ -227,7 +262,6 @@ export default {
   border-radius: 4px;
   border-top: 0px solid #acacad;
 }
-
 
 .fade-left-enter-active,
 .fade-left-leave-active {

@@ -9,6 +9,7 @@ A Vue JS Component for displaying dynamic data on a world map.
 
 - Most of this code is copied from [https://github.com/Ghrehh/vue-world-map](https://github.com/Ghrehh/vue-world-map)
 - Most of this code is also copied from [https://github.com/maguayo/vue-map-chart](https://github.com/maguayo/vue-map-chart)
+- Github : [https://github.com/ronael/vue-map-chart](https://github.com/ronael/vue-map-chart)
 - Map SVG [amCharts](https://www.amcharts.com/svg-maps/?map=world)
 - Lang support [i18n-iso-countries](https://github.com/michaelwittig/node-i18n-iso-countries)
 
@@ -76,6 +77,9 @@ import MapChart from 'vue-map-chart'
 | showLegend | (WIP) If true, when you select a country a legend will appear on the screen | WIP |Boolean|
 | showEmptyValue | If false, does not display the countries in hover, if no value is passed for this country in countryData | yes |Boolean|
 | LangUser | Change the language of the names of countries with an ISO code like "fr", default is "en" | yes |String|
+| currencyAdd | If you want to add currency to your values like 2.45 -> $2.45 | yes |Boolean|
+| currencyOnlySign | If you only want the currency sign in the other like lang 2.45 $US -> 2.45$ | yes |Boolean|
+| currencyCurrent | If you want to change the currency (ISO 4217) lang 2.45 $ -> 2.45 € | yes |String|
 
 
 

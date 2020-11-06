@@ -42,7 +42,6 @@
 </template>
 
 <script>
-import { replace } from '@amcharts/amcharts4/.internal/core/utils/Array'
 import chroma from 'chroma-js'
 import Map from './Map'
 import {

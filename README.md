@@ -1,5 +1,8 @@
 # Vue Chart Map
 
+<a href="https://www.buymeacoffee.com/ronaeldat"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=ronaeldat&button_colour=5F7FFF&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"></a>
+
+
 A Vue JS Component for displaying dynamic data on a world map.
 
 ![preview](https://raw.githubusercontent.com/ronael/vue-map-chart/master/preview/preview-world.png)
